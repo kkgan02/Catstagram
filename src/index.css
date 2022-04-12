@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 30px;
+}
+
+.Feedcard {
+  margin-left: 3%;
+  max-width: 30%;
+}
+
+.name
+{
+  font-size: 17px !important;
+  text-decoration: none;
+  color: black;
+}
+
+.text 
+{
+  font-size: 15px !important;
+  text-align: left;
+}
+
+.catstagram 
+{
+  text-decoration: none !important;
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+h2
+{
+  font-size: 30px;
+  margin-left: 30px;
+  font-weight: bolder;
+  margin-top: 15px !important;
+}
+
+

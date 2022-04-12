@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
+import { Navbar, Container} from "react-bootstrap";
+
+import Feed from "./Feed/Feed.js";
+import Profile from "./Profile/Profile.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+      <Navbar expand="lg" variant="light" bg="dark">
+        <Navbar.Brand><Link style={{color: "white" }} link to ="/" className="catstagram">Catstagram</Link></Navbar.Brand>
+      </Navbar>
+
+      <Routes>
+          <Route exact path="/" element={<Feed/>}/>
+          <Route path="/profile/:id" element={<Profile/>}/>
+      </Routes>
+      </div>
+    </Router>
   );
 }
 
